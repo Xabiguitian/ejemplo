@@ -1,0 +1,13 @@
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/ClientMovieService.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/ClientMovieServiceFactory.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/dto/ClientMovieDto.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/dto/ClientSaleDto.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/exceptions/ClientMovieNotRemovableException.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/exceptions/ClientSaleExpirationException.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/rest/RestClientMovieService.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/rest/json/JsonToClientExceptionConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/rest/json/JsonToClientMovieDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/rest/json/JsonToClientSaleDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/thrift/ClientMovieDtoToThriftMovieDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/service/thrift/ThriftClientMovieService.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-client/src/main/java/es/udc/ws/movies/client/ui/MovieServiceClient.java

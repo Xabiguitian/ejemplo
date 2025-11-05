@@ -1,0 +1,13 @@
+es/udc/ws/movies/client/service/ClientMovieServiceFactory.class
+es/udc/ws/movies/client/service/thrift/ThriftClientMovieService.class
+es/udc/ws/movies/client/service/rest/json/JsonToClientSaleDtoConversor.class
+es/udc/ws/movies/client/service/dto/ClientSaleDto.class
+es/udc/ws/movies/client/service/rest/json/JsonToClientMovieDtoConversor.class
+es/udc/ws/movies/client/service/rest/json/JsonToClientExceptionConversor.class
+es/udc/ws/movies/client/service/dto/ClientMovieDto.class
+es/udc/ws/movies/client/service/thrift/ClientMovieDtoToThriftMovieDtoConversor.class
+es/udc/ws/movies/client/service/exceptions/ClientMovieNotRemovableException.class
+es/udc/ws/movies/client/service/ClientMovieService.class
+es/udc/ws/movies/client/service/rest/RestClientMovieService.class
+es/udc/ws/movies/client/ui/MovieServiceClient.class
+es/udc/ws/movies/client/service/exceptions/ClientSaleExpirationException.class

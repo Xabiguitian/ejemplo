@@ -1,0 +1,13 @@
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/dto/MovieToRestMovieDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/dto/RestMovieDto.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/dto/RestSaleDto.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/dto/SaleToRestSaleDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/json/JsonToRestMovieDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/json/JsonToRestSaleDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/json/MoviesExceptionToJsonConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/servlets/MoviesServlet.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/restservice/servlets/SalesServlet.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/thriftservice/MovieToThriftMovieDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/thriftservice/SaleToThriftSaleDtoConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/thriftservice/ThriftMovieServiceImpl.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-service/src/main/java/es/udc/ws/movies/thriftservice/ThriftMovieServiceServlet.java

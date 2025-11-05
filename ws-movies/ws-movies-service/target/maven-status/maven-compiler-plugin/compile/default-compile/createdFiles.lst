@@ -1,0 +1,13 @@
+es/udc/ws/movies/restservice/dto/RestMovieDto.class
+es/udc/ws/movies/thriftservice/ThriftMovieServiceImpl.class
+es/udc/ws/movies/restservice/json/JsonToRestMovieDtoConversor.class
+es/udc/ws/movies/thriftservice/MovieToThriftMovieDtoConversor.class
+es/udc/ws/movies/thriftservice/ThriftMovieServiceServlet.class
+es/udc/ws/movies/restservice/json/JsonToRestSaleDtoConversor.class
+es/udc/ws/movies/restservice/dto/MovieToRestMovieDtoConversor.class
+es/udc/ws/movies/restservice/dto/SaleToRestSaleDtoConversor.class
+es/udc/ws/movies/restservice/dto/RestSaleDto.class
+es/udc/ws/movies/restservice/servlets/SalesServlet.class
+es/udc/ws/movies/thriftservice/SaleToThriftSaleDtoConversor.class
+es/udc/ws/movies/restservice/servlets/MoviesServlet.class
+es/udc/ws/movies/restservice/json/MoviesExceptionToJsonConversor.class

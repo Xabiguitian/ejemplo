@@ -1,0 +1,14 @@
+es/udc/ws/util/servlet/RestHttpServletTemplate.class
+es/udc/ws/util/servlet/ThriftHttpServletTemplate.class
+es/udc/ws/util/configuration/ConfigurationParametersManager.class
+es/udc/ws/util/exceptions/InputValidationException.class
+es/udc/ws/util/sql/SimpleDataSource.class
+es/udc/ws/util/json/exceptions/ParsingException.class
+es/udc/ws/util/servlet/ThriftHttpServletTemplate$1.class
+es/udc/ws/util/json/ObjectMapperFactory.class
+es/udc/ws/util/sql/DataSourceLocator.class
+es/udc/ws/util/servlet/ServletUtils.class
+es/udc/ws/util/configuration/PropertiesUtil.class
+es/udc/ws/util/exceptions/InstanceNotFoundException.class
+es/udc/ws/util/json/ExceptionToJsonConversor.class
+es/udc/ws/util/validation/PropertyValidator.class

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>es.udc.ws.movies</groupId>
+		<artifactId>ws-movies</artifactId>
+		<version>3.9.0</version>
+	</parent>
+	<artifactId>ws-movies-service</artifactId>
+	<properties>
+	   <p.type>war</p.type>
+	</properties>
+	<packaging>${p.type}</packaging>
+	<name>WS-JavaExamples Movies Service Subsystem</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>es.udc.ws.movies</groupId>
+			<artifactId>ws-movies-model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>es.udc.ws.movies</groupId>
+			<artifactId>ws-movies-thrift</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>ws-movies-service</finalName>
+	</build>
+
+</project>

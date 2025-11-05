@@ -1,0 +1,13 @@
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/configuration/ConfigurationParametersManager.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/configuration/PropertiesUtil.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/exceptions/InputValidationException.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/exceptions/InstanceNotFoundException.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/json/ExceptionToJsonConversor.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/json/ObjectMapperFactory.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/json/exceptions/ParsingException.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/servlet/RestHttpServletTemplate.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/servlet/ServletUtils.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/servlet/ThriftHttpServletTemplate.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/sql/DataSourceLocator.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/sql/SimpleDataSource.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/src/main/java/es/udc/ws/util/validation/PropertyValidator.java

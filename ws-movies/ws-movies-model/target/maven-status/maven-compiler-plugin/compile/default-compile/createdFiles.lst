@@ -1,0 +1,16 @@
+es/udc/ws/movies/model/movie/Movie.class
+es/udc/ws/movies/model/movie/AbstractSqlMovieDao.class
+es/udc/ws/movies/model/movieservice/MovieServiceFactory.class
+es/udc/ws/movies/model/movieservice/MovieServiceImpl.class
+es/udc/ws/movies/model/sale/SqlSaleDaoFactory.class
+es/udc/ws/movies/model/movie/SqlMovieDao.class
+es/udc/ws/movies/model/sale/Jdbc3CcSqlSaleDao.class
+es/udc/ws/movies/model/sale/SqlSaleDao.class
+es/udc/ws/movies/model/sale/AbstractSqlSaleDao.class
+es/udc/ws/movies/model/movieservice/exceptions/SaleExpirationException.class
+es/udc/ws/movies/model/movie/Jdbc3CcSqlMovieDao.class
+es/udc/ws/movies/model/util/ModelConstants.class
+es/udc/ws/movies/model/movieservice/MovieService.class
+es/udc/ws/movies/model/movieservice/exceptions/MovieNotRemovableException.class
+es/udc/ws/movies/model/sale/Sale.class
+es/udc/ws/movies/model/movie/SqlMovieDaoFactory.class

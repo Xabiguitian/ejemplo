@@ -1,0 +1,16 @@
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movie/AbstractSqlMovieDao.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movie/Jdbc3CcSqlMovieDao.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movie/Movie.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movie/SqlMovieDao.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movie/SqlMovieDaoFactory.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movieservice/MovieService.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movieservice/MovieServiceFactory.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movieservice/MovieServiceImpl.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movieservice/exceptions/MovieNotRemovableException.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/movieservice/exceptions/SaleExpirationException.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/sale/AbstractSqlSaleDao.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/sale/Jdbc3CcSqlSaleDao.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/sale/Sale.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/sale/SqlSaleDao.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/sale/SqlSaleDaoFactory.java
+/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/src/main/java/es/udc/ws/movies/model/util/ModelConstants.java

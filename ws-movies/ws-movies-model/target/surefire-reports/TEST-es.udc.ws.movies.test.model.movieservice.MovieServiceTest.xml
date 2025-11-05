@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.277" tests="15" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/mac1/Applications/apache-maven-3.9.11/boot/plexus-classworlds-2.9.0.jar"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="maven.conf" value="/Users/mac1/Applications/apache-maven-3.9.11/conf"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/Users/mac1/Applications/apache-maven-3.9.11"/>
+    <property name="surefire.test.class.path" value="/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/target/test-classes:/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model/target/classes:/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-util/target/ws-util-3.9.0.jar:/Users/mac1/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.2/jackson-databind-2.19.2.jar:/Users/mac1/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.2/jackson-annotations-2.19.2.jar:/Users/mac1/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.2/jackson-core-2.19.2.jar:/Users/mac1/.m2/repository/org/apache/thrift/libthrift/0.22.0/libthrift-0.22.0.jar:/Users/mac1/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/mac1/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/mac1/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/mac1/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/Users/mac1/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.1.0/jakarta.servlet-api-6.1.0.jar:/Users/mac1/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/mac1/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/mac1/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.13.4/junit-jupiter-engine-5.13.4.jar:/Users/mac1/.m2/repository/org/junit/platform/junit-platform-engine/1.13.4/junit-platform-engine-1.13.4.jar:/Users/mac1/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/mac1/.m2/repository/org/junit/platform/junit-platform-commons/1.13.4/junit-platform-commons-1.13.4.jar:/Users/mac1/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.4/junit-jupiter-api-5.13.4.jar:/Users/mac1/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/mac1/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/Users/mac1/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/mac1"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="Launcher"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+9-LTS"/>
+    <property name="user.name" value="mac1"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.0.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.8+9"/>
+    <property name="localRepository" value="/Users/mac1/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/mn/pk8m831512d1qvf4z4x3tpqc0000gn/T/"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="/Users/mac1/Applications/ws-javaexamples-3.9.0/ws-movies/ws-movies-model"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/mac1/Applications/ws-javaexamples-3.9.0"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/mac1/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.8+9-LTS"/>
+    <property name="classworlds.conf" value="/Users/mac1/Applications/apache-maven-3.9.11/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="library.jansi.path" value="/Users/mac1/Applications/apache-maven-3.9.11/lib/jansi-native"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testAddInvalidMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.01"/>
+  <testcase name="testBuyMovieAndFindSale" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.096"/>
+  <testcase name="testAddMovieAndFindMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.011"/>
+  <testcase name="testUpdateMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.014"/>
+  <testcase name="testRemoveMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.027"/>
+  <testcase name="testFindMovies" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.047"/>
+  <testcase name="testGetExpiredMovieUrl" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.018"/>
+  <testcase name="testRemoveMovieWithSales" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.013"/>
+  <testcase name="testFindNonExistentSale" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.003"/>
+  <testcase name="testRemoveNonExistentMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.002"/>
+  <testcase name="testBuyMovieWithInvalidCreditCard" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.006"/>
+  <testcase name="testFindNonExistentMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.002"/>
+  <testcase name="testUpdateNonExistentMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.002"/>
+  <testcase name="testBuyNonExistentMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.002"/>
+  <testcase name="testUpdateInvalidMovie" classname="es.udc.ws.movies.test.model.movieservice.MovieServiceTest" time="0.008"/>
+</testsuite>
