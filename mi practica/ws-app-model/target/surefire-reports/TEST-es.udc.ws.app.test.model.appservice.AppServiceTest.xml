@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.239" tests="14" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/mac1/Applications/apache-maven-3.9.11/boot/plexus-classworlds-2.9.0.jar"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="test.mode" value="true"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="maven.conf" value="/Users/mac1/Applications/apache-maven-3.9.11/conf"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/Users/mac1/Applications/apache-maven-3.9.11"/>
+    <property name="surefire.test.class.path" value="/Users/mac1/Desktop/FIC/ejemplo/mi practica/ws-app-model/target/test-classes:/Users/mac1/Desktop/FIC/ejemplo/mi practica/ws-app-model/target/classes:/Users/mac1/.m2/repository/es/udc/ws/ws-util/3.9.0/ws-util-3.9.0.jar:/Users/mac1/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.2/jackson-databind-2.19.2.jar:/Users/mac1/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.2/jackson-annotations-2.19.2.jar:/Users/mac1/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.2/jackson-core-2.19.2.jar:/Users/mac1/.m2/repository/org/apache/thrift/libthrift/0.22.0/libthrift-0.22.0.jar:/Users/mac1/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar:/Users/mac1/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/mac1/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/mac1/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.3.4/httpcore5-5.3.4.jar:/Users/mac1/.m2/repository/jakarta/servlet/jakarta.servlet-api/6.1.0/jakarta.servlet-api-6.1.0.jar:/Users/mac1/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/mac1/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/mac1/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.13.4/junit-jupiter-engine-5.13.4.jar:/Users/mac1/.m2/repository/org/junit/platform/junit-platform-engine/1.13.4/junit-platform-engine-1.13.4.jar:/Users/mac1/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/mac1/.m2/repository/org/junit/platform/junit-platform-commons/1.13.4/junit-platform-commons-1.13.4.jar:/Users/mac1/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.13.4/junit-jupiter-api-5.13.4.jar:/Users/mac1/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/mac1/.m2/repository/com/mysql/mysql-connector-j/8.4.0/mysql-connector-j-8.4.0.jar:/Users/mac1/.m2/repository/com/google/protobuf/protobuf-java/3.25.1/protobuf-java-3.25.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/mac1"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-07-15"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/mac1/Desktop/FIC/ejemplo/mi practica/ws-app-model"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="Launcher"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.8+9-LTS"/>
+    <property name="user.name" value="mac1"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="26.0.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.8+9"/>
+    <property name="localRepository" value="/Users/mac1/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/mn/pk8m831512d1qvf4z4x3tpqc0000gn/T/"/>
+    <property name="java.version" value="21.0.8"/>
+    <property name="user.dir" value="/Users/mac1/Desktop/FIC/ejemplo/mi practica/ws-app-model"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/mac1/Desktop/FIC/ejemplo/mi practica"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/mac1/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.8+9-LTS"/>
+    <property name="classworlds.conf" value="/Users/mac1/Applications/apache-maven-3.9.11/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="library.jansi.path" value="/Users/mac1/Applications/apache-maven-3.9.11/lib/jansi-native"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testHashCodeConCamposNulos" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.005">
+    <system-out><![CDATA[[DEBUG] --> SurveyService creado con DataSource = es.udc.ws.util.sql.SimpleDataSource@4f290f46
+[DEBUG] --> DataSource y SurveyService inicializados correctamente.
+]]></system-out>
+  </testcase>
+  <testcase name="testBuscarEncuestas" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.108">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: ¿Te gusta el café?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Te gusta el café?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-16T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 1
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@7a71c31c
+[DEBUG] --> Encuesta creada con ID: 1
+[DEBUG] --> Encuesta creada con ID: 1
+[DEBUG] --> Creando encuesta de prueba: ¿Te gusta el té?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Te gusta el té?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-11T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 2
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@1190337a
+[DEBUG] --> Encuesta creada con ID: 2
+[DEBUG] --> Encuesta creada con ID: 2
+[DEBUG] --> Creando encuesta de prueba: ¿Te gusta el café con leche?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Te gusta el café con leche?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-05T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 3
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@8cbdb0fa
+[DEBUG] --> Encuesta creada con ID: 3
+[DEBUG] --> Encuesta creada con ID: 3
+[DEBUG] --> Encuestas encontradas con palabra 'café': 1
+[DEBUG] --> Total encuestas activas encontradas: 2
+]]></system-out>
+  </testcase>
+  <testcase name="testResponderEncuestaInvalida" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.023">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: ¿Te gusta programar?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Te gusta programar?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-08T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 4
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@17b048c2
+[DEBUG] --> Encuesta creada con ID: 4
+[DEBUG] --> Encuesta creada con ID: 4
+[DEBUG] --> No se encontró encuesta con ID: -1
+[DEBUG] --> Creando encuesta de prueba: ¿Encuesta expirada?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Encuesta expirada?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-05T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 5
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@9d1871ba
+[DEBUG] --> Encuesta creada con ID: 5
+[DEBUG] --> Encuesta creada con ID: 5
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@9d1871ba
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@17b048c2
+[DEBUG] --> Encuesta actualizada, filas afectadas: 1
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@17b048bc
+]]></system-out>
+  </testcase>
+  <testcase name="testBuscarEncuestaPorId" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.008">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: Pregunta para buscar
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: Pregunta para buscar
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-06T19:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 6
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@3219972
+[DEBUG] --> Encuesta creada con ID: 6
+[DEBUG] --> Encuesta creada con ID: 6
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@3219972
+[DEBUG] --> Buscando encuesta con ID: 6
+[DEBUG] --> Encuesta encontrada: es.udc.ws.app.model.encuesta.Encuesta@3219972
+[DEBUG] --> No se encontró encuesta con ID: 1005
+]]></system-out>
+  </testcase>
+  <testcase name="testBuscarEncuestasNoIncluyeCanceladasNiExpiradas" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.016">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: Activa
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: Activa
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-09T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 7
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@8416822a
+[DEBUG] --> Encuesta creada con ID: 7
+[DEBUG] --> Encuesta creada con ID: 7
+[DEBUG] --> Creando encuesta de prueba: Cancelada
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: Cancelada
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-09T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 8
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@99989e09
+[DEBUG] --> Encuesta creada con ID: 8
+[DEBUG] --> Encuesta creada con ID: 8
+[DEBUG] --> Creando encuesta de prueba: Expirada
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: Expirada
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-05T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 9
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@c266d222
+[DEBUG] --> Encuesta creada con ID: 9
+[DEBUG] --> Encuesta creada con ID: 9
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@99989e09
+[DEBUG] --> Encuesta actualizada, filas afectadas: 1
+[DEBUG] --> Encuestas activas encontradas (filtro): 6
+]]></system-out>
+  </testcase>
+  <testcase name="testCrearEncuestaBasico" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.006">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: Pregunta de prueba básica
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: Pregunta de prueba básica
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-16T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 10
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@c748198f
+[DEBUG] --> Encuesta creada con ID: 10
+[DEBUG] --> Encuesta creada con ID: 10
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@c748198f
+[DEBUG] --> Encuesta creada: es.udc.ws.app.model.encuesta.Encuesta@c748198f
+[DEBUG] --> Encuesta recuperada de BD: es.udc.ws.app.model.encuesta.Encuesta@c748198f
+]]></system-out>
+  </testcase>
+  <testcase name="testEncuestaExpirada" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.007">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: ¿Encuesta expirada?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Encuesta expirada?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-06T17:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 11
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@dedbc71d
+[DEBUG] --> Encuesta creada con ID: 11
+[DEBUG] --> Encuesta creada con ID: 11
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@dedbc71d
+]]></system-out>
+  </testcase>
+  <testcase name="testCrearEncuestaFechaExpirada" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.001"/>
+  <testcase name="testResponderEncuesta" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.008">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: ¿Te gusta el café?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Te gusta el café?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-08T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 12
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@c06137cf
+[DEBUG] --> Encuesta creada con ID: 12
+[DEBUG] --> Encuesta creada con ID: 12
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@c06137cf
+[DEBUG] --> Encuesta actualizada, filas afectadas: 1
+[DEBUG] --> Respuesta creada: es.udc.ws.app.model.respuesta.Respuesta@ddd4fd72
+]]></system-out>
+  </testcase>
+  <testcase name="testRespuestaModelCoverage" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.001"/>
+  <testcase name="testCambiarRespuestaEncuesta" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.013">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: ¿Te gusta Java?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Te gusta Java?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-11T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 13
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@a1004bb5
+[DEBUG] --> Encuesta creada con ID: 13
+[DEBUG] --> Encuesta creada con ID: 13
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@a1004bb5
+[DEBUG] --> Encuesta actualizada, filas afectadas: 1
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@a1004f76
+[DEBUG] --> Encuesta actualizada, filas afectadas: 1
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@a1004bd4
+]]></system-out>
+  </testcase>
+  <testcase name="testEncuestaCancelada" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.01">
+    <system-out><![CDATA[[DEBUG] --> Creando encuesta de prueba: ¿Encuesta cancelable?
+[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: ¿Encuesta cancelable?
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-08T18:57:46
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 14
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@f73ce354
+[DEBUG] --> Encuesta creada con ID: 14
+[DEBUG] --> Encuesta creada con ID: 14
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@f73ce354
+[DEBUG] --> Encuesta actualizada, filas afectadas: 1
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@f73ce34e
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@f73ce34e
+]]></system-out>
+  </testcase>
+  <testcase name="testAbstractSqlEncuestaDaoCoverage" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.013">
+    <system-out><![CDATA[[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()
+[DEBUG] --> Pregunta: Encuesta DAO
+[DEBUG] --> Fecha creación: 2025-11-06T18:57:46
+[DEBUG] --> Fecha fin: 2025-11-08T18:57:46.538237
+[DEBUG] --> Inserción ejecutada, filas afectadas: 1
+[DEBUG] --> Encuesta creada con ID generado = 15
+[DEBUG] --> Encuesta final creada: es.udc.ws.app.model.encuesta.Encuesta@74778a95
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@f70cf34d
+[DEBUG] --> No se encontró encuesta con ID: -999
+[DEBUG] --> Encuesta actualizada, filas afectadas: 1
+[DEBUG] --> Encuesta recuperada correctamente: es.udc.ws.app.model.encuesta.Encuesta@6dd4af18
+[DEBUG] --> Encuesta actualizada, filas afectadas: 0
+[DEBUG] --> Encuesta eliminada, filas afectadas: 1
+[DEBUG] --> No se encontró encuesta con ID: 15
+[DEBUG] --> Encuesta eliminada, filas afectadas: 0
+]]></system-out>
+  </testcase>
+  <testcase name="testEncuestaModelCoverage" classname="es.udc.ws.app.test.model.appservice.AppServiceTest" time="0.001"/>
+</testsuite>

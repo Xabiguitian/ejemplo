@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AbstractSqlResouestaDao implements SqlRespuestaDao {
-    protected AbstractSqlResouestaDao() {
-    }
 
 
     @Override

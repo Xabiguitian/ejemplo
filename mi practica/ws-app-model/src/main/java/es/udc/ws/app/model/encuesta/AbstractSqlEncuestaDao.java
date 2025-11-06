@@ -1,98 +1,86 @@
 package es.udc.ws.app.model.encuesta;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
+import es.udc.ws.util.exceptions.InstanceNotFoundException;
+import es.udc.ws.util.sql.DataSourceLocator;
+
+import java.sql.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 import static es.udc.ws.app.model.util.ModelConstants.SURVEY_DATA_SOURCE;
-import es.udc.ws.util.exceptions.InstanceNotFoundException;
-import es.udc.ws.util.sql.DataSourceLocator;
-
 
 public abstract class AbstractSqlEncuestaDao implements SqlEncuestaDao {
-    protected AbstractSqlEncuestaDao(){
 
-    }
-    public Encuesta find(Long encuestaId) throws InstanceNotFoundException {
+    @Override
+    public Encuesta create(Connection connection, Encuesta encuesta) {
 
-        String query = "SELECT pregunta, fechaFin, fechaCreacion, " +
-                "respuestasPositivas, respuestasNegativas, cancelada " +
-                "FROM Encuesta WHERE encuestaId = ?";
+        String query = "INSERT INTO Encuesta (pregunta, fechaFin, fechaCreacion, " +
+                "respuestasPositivas, respuestasNegativas, cancelada) " +
+                "VALUES (?, ?, ?, ?, ?, ?)";
 
-        try (Connection connection = DataSourceLocator.getDataSource(SURVEY_DATA_SOURCE)
-                .getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(
+                query, Statement.RETURN_GENERATED_KEYS)) {
 
-            preparedStatement.setLong(1, encuestaId);
-            ResultSet rs = preparedStatement.executeQuery();
+            int i = 1;
+            preparedStatement.setString(i++, encuesta.getPregunta());
+            preparedStatement.setTimestamp(i++, Timestamp.valueOf(encuesta.getFechaFin()));
+            preparedStatement.setTimestamp(i++, Timestamp.valueOf(encuesta.getFechaCreacion()));
+            preparedStatement.setLong(i++, encuesta.getRespuestasPositivas());
+            preparedStatement.setLong(i++, encuesta.getRespuestasNegativas());
+            preparedStatement.setBoolean(i++, encuesta.isCancelada());
 
+            preparedStatement.executeUpdate();
+
+            ResultSet rs = preparedStatement.getGeneratedKeys();
             if (!rs.next()) {
-                throw new InstanceNotFoundException(encuestaId,
-                        Encuesta.class.getName());
+                throw new SQLException("No se pudo obtener el ID generado para la encuesta");
             }
 
-            String pregunta = rs.getString("pregunta");
-            Timestamp fechaFin = rs.getTimestamp("fechaFin");
-            Timestamp fechaCreacion = rs.getTimestamp("fechaCreacion");
-            int respuestasPos = rs.getInt("respuestasPositivas");
-            int respuestasNeg = rs.getInt("respuestasNegativas");
-            boolean cancelada = rs.getBoolean("cancelada");
+            Long encuestaId = rs.getLong(1);
+            System.out.println("[DEBUG] --> Encuesta insertada con ID: " + encuestaId);
 
-            return new Encuesta(encuestaId, pregunta, fechaFin.toLocalDateTime(),
-                    fechaCreacion.toLocalDateTime(), respuestasPos, respuestasNeg, cancelada);
+            return new Encuesta(
+                    encuestaId,
+                    encuesta.getPregunta(),
+                    encuesta.getFechaCreacion(),
+                    encuesta.getFechaFin(),
+                    encuesta.getRespuestasPositivas(),
+                    encuesta.getRespuestasNegativas(),
+                    encuesta.isCancelada()
+            );
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public List<Encuesta> findByKeyword(String keyword, boolean soloNoFinalizadas) {
+    @Override
+    public Encuesta find(Connection connection, Long encuestaId)
+            throws InstanceNotFoundException {
 
-        // Versión simplificada de la query base
-        String baseQuery = "SELECT encuestaId, pregunta, fechaFin, fechaCreacion, " +
+        String query = "SELECT pregunta, fechaCreacion, fechaFin, " +
                 "respuestasPositivas, respuestasNegativas, cancelada " +
-                "FROM Encuesta WHERE pregunta LIKE ?";
+                "FROM Encuesta WHERE encuestaId = ?";
 
-        // Añadir condiciones dinámicas
-        if (soloNoFinalizadas) {
-            baseQuery += " AND fechaFin > ?";
-        }
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
-        baseQuery += " ORDER BY fechaCreacion DESC";
-
-        List<Encuesta> encuestas = new ArrayList<>();
-
-        try (Connection connection = DataSourceLocator.getDataSource("jdbc/app").getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(baseQuery)) {
-
-            preparedStatement.setString(1, "%" + keyword + "%");
-            if (soloNoFinalizadas) {
-                preparedStatement.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
-            }
-
+            preparedStatement.setLong(1, encuestaId);
             ResultSet rs = preparedStatement.executeQuery();
 
-            while (rs.next()) {
-                // Recuperar datos del ResultSet
-                Long encuestaId = rs.getLong("encuestaId");
-                String pregunta = rs.getString("pregunta");
-                LocalDateTime fechaFin = rs.getTimestamp("fechaFin").toLocalDateTime();
-                LocalDateTime fechaCreacion = rs.getTimestamp("fechaCreacion").toLocalDateTime();
-                int respuestasPositivas = rs.getInt("respuestasPositivas");
-                int respuestasNegativas = rs.getInt("respuestasNegativas");
-                boolean cancelada = rs.getBoolean("cancelada");
-
-                // Añadir a la lista
-                encuestas.add(new Encuesta(encuestaId, pregunta, fechaFin, fechaCreacion,
-                        respuestasPositivas, respuestasNegativas, cancelada));
+            if (!rs.next()) {
+                throw new InstanceNotFoundException(encuestaId, Encuesta.class.getName());
             }
 
-            return encuestas;
+            String pregunta = rs.getString("pregunta");
+            LocalDateTime fechaCreacion = rs.getTimestamp("fechaCreacion").toLocalDateTime();
+            LocalDateTime fechaFin = rs.getTimestamp("fechaFin").toLocalDateTime();
+            long respuestasPositivas = rs.getLong("respuestasPositivas");
+            long respuestasNegativas = rs.getLong("respuestasNegativas");
+            boolean cancelada = rs.getBoolean("cancelada");
+
+            return new Encuesta(encuestaId, pregunta, fechaCreacion, fechaFin,
+                    respuestasPositivas, respuestasNegativas, cancelada);
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -104,76 +92,64 @@ public abstract class AbstractSqlEncuestaDao implements SqlEncuestaDao {
 
         List<Encuesta> encuestas = new ArrayList<>();
 
-
-        String queryString = "SELECT encuestaId, pregunta, fechaCreacion, fechaFin, "
-                + "respuestasPositivas, respuestasNegativas, cancelada "
-                + "FROM Encuesta WHERE pregunta LIKE ?";
-
+        String query = "SELECT encuestaId, pregunta, fechaCreacion, fechaFin, " +
+                "respuestasPositivas, respuestasNegativas, cancelada " +
+                "FROM Encuesta WHERE pregunta LIKE ?";
 
         if (soloNoFinalizadas) {
-            queryString += " AND fechaFin > ?";
+            query += " AND fechaFin > ?";
         }
 
-        queryString += " ORDER BY fechaCreacion DESC";
+        query += " ORDER BY fechaCreacion DESC";
 
-        try (Connection connection = DataSourceLocator.getDataSource("jdbc/ws-javaexamples-ds").getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(queryString)) {
+        try (Connection connection = DataSourceLocator.getDataSource(SURVEY_DATA_SOURCE).getConnection();
+             PreparedStatement ps = connection.prepareStatement(query)) {
 
-            // Asignamos los parámetros
-            preparedStatement.setString(1, "%" + keywords + "%");
-
+            ps.setString(1, "%" + keywords + "%");
             if (soloNoFinalizadas) {
-                preparedStatement.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
+                ps.setTimestamp(2, Timestamp.valueOf(LocalDateTime.now()));
             }
 
-            ResultSet rs = preparedStatement.executeQuery();
+            ResultSet rs = ps.executeQuery();
 
-            // Recorremos los resultados
             while (rs.next()) {
-                Long encuestaId = rs.getLong(1);
-                String pregunta = rs.getString(2);
-                LocalDateTime fechaCreacion = rs.getTimestamp(3).toLocalDateTime();
-                LocalDateTime fechaFin = rs.getTimestamp(4).toLocalDateTime();
-                long pos = rs.getLong(5); // Usamos getLong
-                long neg = rs.getLong(6); // Usamos getLong
-                boolean cancelada = rs.getBoolean(7);
+                Long encuestaId = rs.getLong("encuestaId");
+                String pregunta = rs.getString("pregunta");
+                LocalDateTime fechaCreacion = rs.getTimestamp("fechaCreacion").toLocalDateTime();
+                LocalDateTime fechaFin = rs.getTimestamp("fechaFin").toLocalDateTime();
+                long pos = rs.getLong("respuestasPositivas");
+                long neg = rs.getLong("respuestasNegativas");
+                boolean cancelada = rs.getBoolean("cancelada");
 
-                // Añadimos la encuesta a la lista
-                encuestas.add(new Encuesta(encuestaId, pregunta, fechaCreacion, fechaFin,
-                        pos, neg, cancelada));
+                encuestas.add(new Encuesta(encuestaId, pregunta, fechaCreacion, fechaFin, pos, neg, cancelada));
             }
 
-            // Devolvemos la lista (estará vacía si no se encontró nada)
             return encuestas;
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
-    
-    public void update(Encuesta encuesta) throws InstanceNotFoundException {
 
-        String queryString = "UPDATE Encuesta SET pregunta = ?, fechaFin = ?, " +
+    @Override
+    public void update(Connection connection, Encuesta encuesta)
+            throws InstanceNotFoundException {
+
+        String query = "UPDATE Encuesta SET pregunta = ?, fechaFin = ?, " +
                 "respuestasPositivas = ?, respuestasNegativas = ?, cancelada = ? " +
                 "WHERE encuestaId = ?";
 
-        // Usamos el JNDI name de tu pom.xml
-        try (Connection connection = DataSourceLocator.getDataSource("jdbc/ws-javaexamples-ds").getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(queryString)) {
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
 
-            // Asignar parámetros
-            preparedStatement.setString(1, encuesta.getPregunta());
-            preparedStatement.setTimestamp(2, Timestamp.valueOf(encuesta.getFechaFin()));
-            preparedStatement.setLong(3, encuesta.getRespuestasPositivas());
-            preparedStatement.setLong(4, encuesta.getRespuestasNegativas());
-            preparedStatement.setBoolean(5, encuesta.isCancelada());
-            preparedStatement.setLong(6, encuesta.getEncuestaId());
+            ps.setString(1, encuesta.getPregunta());
+            ps.setTimestamp(2, Timestamp.valueOf(encuesta.getFechaFin()));
+            ps.setLong(3, encuesta.getRespuestasPositivas());
+            ps.setLong(4, encuesta.getRespuestasNegativas());
+            ps.setBoolean(5, encuesta.isCancelada());
+            ps.setLong(6, encuesta.getEncuestaId());
 
-            // Ejecutar la actualización
-            int rowsAffected = preparedStatement.executeUpdate();
-
-            if (rowsAffected == 0) {
-                // Si no se actualizó ninguna fila, la encuesta no existía
+            int rows = ps.executeUpdate();
+            if (rows == 0) {
                 throw new InstanceNotFoundException(encuesta.getEncuestaId(), Encuesta.class.getName());
             }
 
@@ -182,18 +158,18 @@ public abstract class AbstractSqlEncuestaDao implements SqlEncuestaDao {
         }
     }
 
-    public void remove(Long encuestaId) throws InstanceNotFoundException {
+    @Override
+    public void remove(Connection connection, Long encuestaId)
+            throws InstanceNotFoundException {
 
         String query = "DELETE FROM Encuesta WHERE encuestaId = ?";
 
-        try (Connection connection = DataSourceLocator.getDataSource("jdbc/app").getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+        try (PreparedStatement ps = connection.prepareStatement(query)) {
 
-            preparedStatement.setLong(1, encuestaId);
+            ps.setLong(1, encuestaId);
+            int rows = ps.executeUpdate();
 
-            int rowsAffected = preparedStatement.executeUpdate();
-
-            if (rowsAffected == 0) {
+            if (rows == 0) {
                 throw new InstanceNotFoundException(encuestaId, Encuesta.class.getName());
             }
 
@@ -202,4 +178,3 @@ public abstract class AbstractSqlEncuestaDao implements SqlEncuestaDao {
         }
     }
 }
-

@@ -1,5 +1,7 @@
 package es.udc.ws.app.model.encuesta;
 
+import es.udc.ws.util.configuration.ConfigurationParametersManager;
+
 public class EncuestaDaoFactory {
     private final static String CLASS_NAME_PARAMETER = "EncuestaDaoFactory.className";
     private static SqlEncuestaDao dao = null;
@@ -10,11 +12,8 @@ public class EncuestaDaoFactory {
     @SuppressWarnings("unchecked")
     private static SqlEncuestaDao getInstance() {
         try {
-            String daoClassName = System.getProperty(CLASS_NAME_PARAMETER);
-            if (daoClassName == null) {
-                // Nombre por defecto de la implementación SQL del DAO
-                daoClassName = "es.udc.ws.app.model.encuesta.SqlEncuestaDao";
-            }
+            String daoClassName = ConfigurationParametersManager.getParameter(CLASS_NAME_PARAMETER);
+
             Class<?> daoClass = Class.forName(daoClassName);
             dao = (SqlEncuestaDao) daoClass.getDeclaredConstructor().newInstance();
         } catch (Exception e) {

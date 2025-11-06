@@ -65,4 +65,51 @@ public class Respuesta {
     public void setFechaRespuesta(LocalDateTime fechaRespuesta) {
         this.fechaRespuesta = fechaRespuesta;
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((respuestaId == null) ? 0 : respuestaId.hashCode());
+        result = prime * result + ((encuestaId == null) ? 0 : encuestaId.hashCode());
+        result = prime * result + ((emailEmpleado == null) ? 0 : emailEmpleado.hashCode());
+        result = prime * result + (afirmativa ? 1231 : 1237);
+        result = prime * result + ((fechaRespuesta == null) ? 0 : fechaRespuesta.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+            return false;
+        Respuesta other = (Respuesta) obj;
+        return respuestaId != null ? respuestaId.equals(other.respuestaId) : other.respuestaId == null;
+        /*
+        if (respuestaId == null) {
+            if (other.respuestaId != null)
+                return false;
+        } else if (!respuestaId.equals(other.respuestaId))
+            return false;
+        if (encuestaId == null) {
+            if (other.encuestaId != null)
+                return false;
+        } else if (!encuestaId.equals(other.encuestaId))
+            return false;
+        if (emailEmpleado == null) {
+            if (other.emailEmpleado != null)
+                return false;
+        } else if (!emailEmpleado.equals(other.emailEmpleado))
+            return false;
+        if (afirmativa != other.afirmativa)
+            return false;
+        if (fechaRespuesta == null) {
+            if (other.fechaRespuesta != null)
+                return false;
+        } else if (!fechaRespuesta.equals(other.fechaRespuesta))
+            return false;
+        return true;*/
+    }
+
 }

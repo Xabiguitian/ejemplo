@@ -1,6 +1,9 @@
 package es.udc.ws.app.model.encuesta;
 
+import es.udc.ws.app.model.respuesta.Respuesta;
+
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Encuesta {
 
@@ -91,5 +94,18 @@ public class Encuesta {
 
     public long getTotalRespuestas() {
         return this.respuestasPositivas + this.respuestasNegativas;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Encuesta encuesta = (Encuesta) o;
+        return respuestasPositivas == encuesta.respuestasPositivas && respuestasNegativas == encuesta.respuestasNegativas && cancelada == encuesta.cancelada && Objects.equals(encuestaId, encuesta.encuestaId) && Objects.equals(pregunta, encuesta.pregunta) && Objects.equals(fechaCreacion, encuesta.fechaCreacion) && Objects.equals(fechaFin, encuesta.fechaFin);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(encuestaId, pregunta, fechaCreacion, fechaFin, respuestasPositivas, respuestasNegativas, cancelada);
     }
 }
