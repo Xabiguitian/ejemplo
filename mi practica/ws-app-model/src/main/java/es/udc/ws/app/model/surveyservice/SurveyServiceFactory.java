@@ -24,9 +24,6 @@ public class SurveyServiceFactory {
     public synchronized static SurveyService getService() {
         if (service == null) {
             service = getInstance();
-            System.out.println("[DEBUG] --> SurveyService creado con DataSource = "
-                    + es.udc.ws.util.sql.DataSourceLocator.getDataSource(
-                    es.udc.ws.app.model.util.ModelConstants.SURVEY_DATA_SOURCE));
         }
         return service;
     }

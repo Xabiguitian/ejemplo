@@ -1,7 +1,5 @@
 package es.udc.ws.app.model.encuesta;
 
-import es.udc.ws.app.model.respuesta.Respuesta;
-
 import java.time.LocalDateTime;
 import java.util.Objects;
 

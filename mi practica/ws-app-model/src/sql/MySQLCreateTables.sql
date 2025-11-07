@@ -1,7 +1,3 @@
--- ----------------------------------------------------------------------------
--- TechFic Survey Model (Práctica ISD 2025-2026)
--- ----------------------------------------------------------------------------
-
 DROP TABLE IF EXISTS Respuesta;
 DROP TABLE IF EXISTS Encuesta;
 
@@ -15,9 +11,7 @@ CREATE TABLE Encuesta (
                           cancelada BOOLEAN NOT NULL DEFAULT 0,
                           CONSTRAINT EncuestaPK PRIMARY KEY (encuestaId)
 ) ENGINE = InnoDB;
--- ----------------------------------------------------------------------------
--- TechFic Survey Model (Práctica ISD 2025-2026)
--- ----------------------------------------------------------------------------
+
 
 DROP TABLE IF EXISTS Respuesta;
 DROP TABLE IF EXISTS Encuesta;
@@ -43,9 +37,7 @@ CREATE TABLE Respuesta (
                            CONSTRAINT RespuestaEncuestaFK FOREIGN KEY (encuestaId)
                                REFERENCES Encuesta(encuestaId) ON DELETE CASCADE
 ) ENGINE = InnoDB;
--- ----------------------------------------------------------------------------
--- TechFic Survey Model (Práctica ISD 2025-2026)
--- ----------------------------------------------------------------------------
+
 
 DROP TABLE IF EXISTS Respuesta;
 DROP TABLE IF EXISTS Encuesta;

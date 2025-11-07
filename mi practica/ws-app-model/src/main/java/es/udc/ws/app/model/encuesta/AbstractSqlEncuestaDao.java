@@ -38,7 +38,6 @@ public abstract class AbstractSqlEncuestaDao implements SqlEncuestaDao {
             }
 
             Long encuestaId = rs.getLong(1);
-            System.out.println("[DEBUG] --> Encuesta insertada con ID: " + encuestaId);
 
             return new Encuesta(
                     encuestaId,

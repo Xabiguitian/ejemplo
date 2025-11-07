@@ -16,12 +16,6 @@ public class Jdbc3CcSqlEncuestaDao extends AbstractSqlEncuestaDao {
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 query, Statement.RETURN_GENERATED_KEYS)) {
-
-            System.out.println("[DEBUG] --> Entrando en Jdbc3CcSqlEncuestaDao.create()");
-            System.out.println("[DEBUG] --> Pregunta: " + encuesta.getPregunta());
-            System.out.println("[DEBUG] --> Fecha creación: " + encuesta.getFechaCreacion());
-            System.out.println("[DEBUG] --> Fecha fin: " + encuesta.getFechaFin());
-
             int i = 1;
             preparedStatement.setString(i++, encuesta.getPregunta());
             preparedStatement.setTimestamp(i++, Timestamp.valueOf(encuesta.getFechaFin()));
@@ -31,14 +25,12 @@ public class Jdbc3CcSqlEncuestaDao extends AbstractSqlEncuestaDao {
             preparedStatement.setBoolean(i++, encuesta.isCancelada());
 
             int filas = preparedStatement.executeUpdate();
-            System.out.println("[DEBUG] --> Inserción ejecutada, filas afectadas: " + filas);
 
             ResultSet rs = preparedStatement.getGeneratedKeys();
             if (!rs.next()) {
                 throw new SQLException("No se pudo obtener el ID generado para la encuesta");
             }
             Long encuestaId = rs.getLong(1);
-            System.out.println("[DEBUG] --> Encuesta creada con ID generado = " + encuestaId);
 
             Encuesta nueva = new Encuesta(
                     encuestaId,
@@ -50,11 +42,9 @@ public class Jdbc3CcSqlEncuestaDao extends AbstractSqlEncuestaDao {
                     encuesta.isCancelada()
             );
 
-            System.out.println("[DEBUG] --> Encuesta final creada: " + nueva);
             return nueva;
 
         } catch (SQLException e) {
-            System.err.println("[ERROR] --> Error al crear encuesta: " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -74,7 +64,6 @@ public class Jdbc3CcSqlEncuestaDao extends AbstractSqlEncuestaDao {
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
 
                 if (!resultSet.next()) {
-                    System.out.println("[DEBUG] --> No se encontró encuesta con ID: " + encuestaId);
                     throw new InstanceNotFoundException(encuestaId, Encuesta.class.getName());
                 }
 
@@ -96,7 +85,6 @@ public class Jdbc3CcSqlEncuestaDao extends AbstractSqlEncuestaDao {
                         cancelada
                 );
 
-                System.out.println("[DEBUG] --> Encuesta recuperada correctamente: " + encuesta);
                 return encuesta;
             }
 
@@ -125,8 +113,6 @@ public class Jdbc3CcSqlEncuestaDao extends AbstractSqlEncuestaDao {
             preparedStatement.setLong(i++, encuesta.getEncuestaId());
 
             int filas = preparedStatement.executeUpdate();
-            System.out.println("[DEBUG] --> Encuesta actualizada, filas afectadas: " + filas);
-
             if (filas == 0) {
                 throw new InstanceNotFoundException(encuesta.getEncuestaId(), Encuesta.class.getName());
             }
@@ -148,8 +134,6 @@ public class Jdbc3CcSqlEncuestaDao extends AbstractSqlEncuestaDao {
             preparedStatement.setLong(1, encuestaId);
 
             int filas = preparedStatement.executeUpdate();
-            System.out.println("[DEBUG] --> Encuesta eliminada, filas afectadas: " + filas);
-
             if (filas == 0) {
                 throw new InstanceNotFoundException(encuestaId, Encuesta.class.getName());
             }

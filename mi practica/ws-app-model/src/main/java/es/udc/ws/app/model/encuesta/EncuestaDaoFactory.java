@@ -9,7 +9,6 @@ public class EncuestaDaoFactory {
     private EncuestaDaoFactory() {
     }
 
-    @SuppressWarnings("unchecked")
     private static SqlEncuestaDao getInstance() {
         try {
             String daoClassName = ConfigurationParametersManager.getParameter(CLASS_NAME_PARAMETER);

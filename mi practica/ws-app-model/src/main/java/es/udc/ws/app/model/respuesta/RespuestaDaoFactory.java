@@ -2,7 +2,6 @@ package es.udc.ws.app.model.respuesta;
 
 import es.udc.ws.util.configuration.ConfigurationParametersManager;
 
-// Esta clase es idéntica a EncuestaDaoFactory, pero para Respuesta
 public class RespuestaDaoFactory {
     private final static String CLASS_NAME_PARAMETER = "RespuestaDaoFactory.className";
     private static SqlRespuestaDao dao = null;
@@ -10,7 +9,7 @@ public class RespuestaDaoFactory {
     private RespuestaDaoFactory() {
     }
 
-    @SuppressWarnings("unchecked")
+
     private static SqlRespuestaDao getInstance() {
         try {
             String daoClassName = ConfigurationParametersManager.getParameter(CLASS_NAME_PARAMETER);

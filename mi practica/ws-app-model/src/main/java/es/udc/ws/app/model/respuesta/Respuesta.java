@@ -86,30 +86,6 @@ public class Respuesta {
             return false;
         Respuesta other = (Respuesta) obj;
         return respuestaId != null ? respuestaId.equals(other.respuestaId) : other.respuestaId == null;
-        /*
-        if (respuestaId == null) {
-            if (other.respuestaId != null)
-                return false;
-        } else if (!respuestaId.equals(other.respuestaId))
-            return false;
-        if (encuestaId == null) {
-            if (other.encuestaId != null)
-                return false;
-        } else if (!encuestaId.equals(other.encuestaId))
-            return false;
-        if (emailEmpleado == null) {
-            if (other.emailEmpleado != null)
-                return false;
-        } else if (!emailEmpleado.equals(other.emailEmpleado))
-            return false;
-        if (afirmativa != other.afirmativa)
-            return false;
-        if (fechaRespuesta == null) {
-            if (other.fechaRespuesta != null)
-                return false;
-        } else if (!fechaRespuesta.equals(other.fechaRespuesta))
-            return false;
-        return true;*/
     }
 
 }

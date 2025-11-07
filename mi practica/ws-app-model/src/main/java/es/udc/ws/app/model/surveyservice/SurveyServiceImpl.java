@@ -16,15 +16,12 @@ import es.udc.ws.util.sql.DataSourceLocator;
 import es.udc.ws.util.validation.PropertyValidator;
 import static es.udc.ws.app.model.util.ModelConstants.SURVEY_DATA_SOURCE;
 
-
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
-
-
 
 public class SurveyServiceImpl implements SurveyService {
 
@@ -55,7 +52,6 @@ public class SurveyServiceImpl implements SurveyService {
 
         try (Connection connection = dataSource.getConnection()) {
             Encuesta creada = encuestaDao.create(connection, encuesta);
-            System.out.println("[DEBUG] --> Encuesta creada con ID: " + creada.getEncuestaId());
             return creada;
         } catch (SQLException e) {
             throw new RuntimeException("Error creando encuesta", e);
@@ -117,7 +113,6 @@ public class SurveyServiceImpl implements SurveyService {
                         respuestaDao.findByEmailAndEncuestaId(connection, encuestaId, emailEmpleado);
 
                 if (respuestaExistente == null) {
-                    // Nuevo voto
                     Respuesta nueva = new Respuesta(encuestaId, emailEmpleado, afirmativa);
                     nueva.setFechaRespuesta(ahora);
                     respuestaDao.create(connection, nueva);
@@ -130,7 +125,6 @@ public class SurveyServiceImpl implements SurveyService {
                     encuestaDao.update(connection, encuesta);
 
                 } else {
-                    // Actualización de voto
                     boolean anterior = respuestaExistente.isAfirmativa();
                     respuestaExistente.setAfirmativa(afirmativa);
                     respuestaExistente.setFechaRespuesta(ahora);
@@ -216,7 +210,6 @@ public class SurveyServiceImpl implements SurveyService {
             throws InstanceNotFoundException {
 
         try (Connection connection = dataSource.getConnection()) {
-            // Puede devolverse incluso si está cancelada o finalizada
             encuestaDao.find(connection, encuestaId);
             return respuestaDao.findByEncuestaId(connection, encuestaId, soloAfirmativas);
         } catch (SQLException e) {
